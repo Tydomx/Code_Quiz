@@ -1,17 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Code Quiz</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- google font -->
+
 </head>
+
 <body>
-    
+    <!-- navbar -->
+    <header>
+        <nav class="highScore">
+            <div class="container">
+                <!-- highscore link on navbar -->
+                <a href="" class="highScoreLink">highScore</a>
+
+                <!-- timer on navbar -->
+                <ul class="timer">
+                    <li class="nav-item timer" id="timer">Timer</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
 
+    <!-- quiz content -->
+    <div class="container">
+        <div class="row">
+            <div class="quiz-box">
+                <div id="wrapper">
+                    <div id="questions">
+                        <h2>Code Quiz</h2>
+                        <hr>
+                        <p>Get ready for a quick little coding quiz! This quiz consists of some questions and a timer.
+                            Keep in mind incorrect answers will penalize you lowering your score and time!</p>
+                        <button id="startQuiz" class="btn">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- highScore -->
+    <div class="container highScore-container">
+        <div class="row">
+            <div class="quiz-box">
+                <div id="wrapper">
+                    <div id="currentTime"></div>
+                    <div id="questions">
+                        <h2>Highscores</h2>
+                        <hr>
+                        <ul id="highScore"></ul>
+                        <!-- buttons -->
+                        <button id="goBack" class="btn" type="button" onclick="">Go Back</button>
+                        <button id="reset" value="reset" class="btn">Reset Leaderboard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <span>Made by Michael T</span>
+        </div>
+    </footer>
+
+    <!-- linking script -->
     <script src="./assets/js/quiz.js"></script>
 </body>
+
 </html>
