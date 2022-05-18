@@ -1,0 +1,81 @@
+* {
+    font-family: 'Source Code Pro', sans-serif;
+    color:rgb(12, 101, 179);
+}
+
+h2 {
+    color: #000;
+}
+
+/* body */
+body {
+    background-color: rgb(125, 125, 125);
+}
+
+.navbar {
+   background-color: rgb(60, 199, 250);
+}
+
+.timer {
+    padding: 1px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.highScore {
+    font-weight: bold;
+}
+
+
+/* quiz box */
+.quiz-box {
+    margin: 100px;
+    margin-right: 50px;
+    background-color: rgb(197, 197, 176);
+    box-shadow: 5px gray;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.quiz-box h2 {
+    margin-top: 5px;
+}
+
+/* start quiz button */
+.btn {
+    font-weight: bold;
+    background-color: rgb(12, 101, 179);
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    background-color: green;
+    color: #000;
+}
+
+.btn:active {
+   box-shadow: 0px 5px;
+   background-image: linear-gradient(180deg, #024811, #04371c);
+}
+
+ul {
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+}
