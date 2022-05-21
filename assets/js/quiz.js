@@ -12,7 +12,7 @@ var questionContainer = document.querySelector(".question-container");
 var highscoreContainer = document.querySelector(".highScore-container");
 
 //variables for the timer
-var timer = document.querySelector("#start");
+var timerEl = document.querySelector("#start");
 var currentTime = document.querySelector("#currentTime");
 var ulCreate = document.createElement("ul");
 var secondsLeft = 60;
@@ -70,14 +70,14 @@ render = (questionIndex) => {
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
 
-    // to loop through entire questions array
+    // loops through entire questions array
     for (var i = 0; i < questions.length; i++) {
         // appends question title only
         var userQuestion = questions[questionIndex].question;
         var userChoices = questions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
     }
-    // appends questions and choices, and adds hr elements for aesthetics
+    // appends questions and choices
     var rule = document.createElement("hr");
     questionsDiv.appendChild(rule);
     userChoices.forEach(function (newItem) {
@@ -109,11 +109,11 @@ compare = (event) => {
         } else {
             // deducting 5 seconds off of the timer
             secondsLeft = secondsLeft - penalty;
-            createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
+            createDiv.textContent = "Incorrect! The correct answer is:  " + questions[questionIndex].answer;
         };
     };
 
-    // Question Index determines number question user is on
+    // questionIndex determines number question user is on
     questionIndex++;
     if (questionIndex >= questions.length) {
         // All done will append last page with user stats
@@ -150,20 +150,20 @@ function gameOver() {
         questionsDiv.appendChild(createP2);
     };
 
-    // label:
+    // label
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
     questionsDiv.appendChild(createLabel);
 
-    // input:
+    // user inputting their initials
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
     createInput.textContent = "";
     questionsDiv.appendChild(createInput);
 
-    // submit:
+    // submit button
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
@@ -193,9 +193,9 @@ function gameOver() {
             localStorage.setItem("allScores", newScore);
         };
 
-        // displays highscore content from local storage upon submission at game over
+        // displays highscore content from local storage
         renderHighScores = () => {
-            // to loop through all highscores in local storage
+            // looping through all highscores in local storage
             for (var i = 0; i < allScores.length; i++) {
                 var highscoreUL = document.querySelector("#highScore");
                 var highscoreLi = document.createElement("li");
@@ -211,7 +211,7 @@ function gameOver() {
             highscoreUL.remove();
         });
 
-        // replaces quiz-box content with highscore-box content
+        // replaces quiz box content with highscore content
         questionContainer.setAttribute("style", "display: none !important")
         highscoreContainer.setAttribute("style", "display: block !important")
         renderHighScores();
