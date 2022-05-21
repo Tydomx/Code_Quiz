@@ -26,11 +26,11 @@
         <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
             <div class="container-fluid">
                 <!-- highscore link on navbar -->
-                <a href="#" class="navbar-brand highScore">Highscores</a>
+                <a href="https://tydomx.github.io/Code_Quiz_/" class="navbar-brand highScore-link">Highscores</a>
 
                 <!-- timer on navbar -->
-                <ul class="navbar-nav mr-auto mb-md-0 timer">
-                    <li class="nav-item timer" id="timer">Timer</li>
+                <ul class="navbar-nav mr-auto mb-md-0">
+                    <li class="nav-item timer" id="currentTime">Timer</li>
                 </ul>
             </div>
         </nav>
@@ -38,17 +38,17 @@
 
 
     <!-- quiz content -->
-    <div class="container">
+    <div class="container question-container">
         <div class="row">
-            <div class="quiz-box col-md-12">
+            <div class="quiz-box col-md-10 main-content-box">
                 <div id="wrapper">
-                    <div id="questions">
+                    <div id="questionsDiv">
                         <h2>Code Quiz</h2>
                         <hr>
                         <p>Get ready for a quick little coding quiz! This quiz consists of some questions and a timer.
                             Keep in mind incorrect answers will penalize you lowering your score and time!</p>
-                        <ul id="choices"></ul>
-                        <button id="startQuiz" class="btn">Start Quiz</button>
+                        <ul id="choicesUl"></ul>
+                        <button id="start" class="btn">Start Quiz</button>
                     </div>
                 </div>
             </div>
@@ -61,12 +61,13 @@
             <div class="quiz-box col-md-12">
                 <div id="wrapper">
                     <div id="currentTime"></div>
-                    <div id="questions">
+                    <div id="questionsDiv">
                         <h2>Highscores</h2>
                         <hr>
                         <ul id="highScore"></ul>
                         <!-- buttons -->
-                        <button id="goBack" class="btn" type="button" onclick="">Go Back</button>
+                        <button id="goBack" class="btn"
+                            onclick=location.href='https://tydomx.github.io/Code_Quiz_/' type="button">Go Back</button>
                         <button id="reset" value="reset" class="btn">Reset Leaderboard</button>
                     </div>
                 </div>

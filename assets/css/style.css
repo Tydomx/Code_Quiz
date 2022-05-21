@@ -22,7 +22,7 @@ body {
     font-size: 1.2rem;
 }
 
-.highScore {
+.highScore-link {
     font-weight: bold;
 }
 
@@ -31,7 +31,7 @@ body {
 .quiz-box {
     margin: 100px;
     margin-right: 50px;
-    background-color: rgb(197, 197, 176);
+    background-color: rgb(212, 189, 42);
     box-shadow: 5px gray;
     border-radius: 10px;
     border: 1px solid #000;
@@ -41,12 +41,20 @@ body {
     margin-top: 5px;
 }
 
+#questionsDiv {
+    margin-top: 5px;
+}
+
 /* start quiz button */
 .btn {
     font-weight: bold;
     background-color: rgb(12, 101, 179);
     display: inline-block;
     margin-bottom: 10px;
+    border: 1px solid #020202;
+    border-radius: 10px;
+    font-size: 1rem;
+    line-height: 22px;
 }
 
 .btn:hover {
