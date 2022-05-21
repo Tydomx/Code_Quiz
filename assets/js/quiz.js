@@ -2,16 +2,16 @@
 var score = 0;
 var questionIndex = 0;
 
-// html DOM elements
+// DOM elements
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
-var highscoreLink = document.querySelector(".highscore-link")
+var highscoreLink = document.querySelector(".highScore-link")
 var playAgainLink = document.querySelector("#goBack")
 var clearLink = document.querySelector("#reset");
 var questionContainer = document.querySelector(".question-container");
 var highscoreContainer = document.querySelector(".highScore-container");
 
-//variables for the timer
+// variables for the timer
 var timerEl = document.querySelector("#start");
 var currentTime = document.querySelector("#currentTime");
 var ulCreate = document.createElement("ul");
@@ -20,8 +20,8 @@ var holdInterval = 0;
 var penalty = 5;
 
 
-// displays timer and starts it when timer hits 0 gameOver function will be called
-timer.addEventListener("click", function () {
+// displays timer and starts whenever 'start quiz' button is pressed. whenever timer hits 0 gameOver function will be called
+timerEl.addEventListener("click", function () {
     if (holdInterval === 0) {
         holdInterval = setInterval(function () {
             secondsLeft--;
@@ -126,27 +126,27 @@ compare = (event) => {
 };
 
 // appends game over page
-function gameOver() {
+gameOver = () => {
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
-    // heading:
+    // heading "Game Over!"
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "Game Over!";
     questionsDiv.appendChild(createH1);
 
-    // paragraph:
+    // paragraph
     var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
     questionsDiv.appendChild(createP);
 
     // calculates time remaining and replaces it with score
     if (secondsLeft >= 0) {
-        var timeRemaining = secondsLeft;
+        var timeLeft = secondsLeft;
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
-        createP.textContent = "Your final score is: " + timeRemaining;
+        createP.textContent = "Your final score is: " + timeLeft;
         questionsDiv.appendChild(createP2);
     };
 
@@ -179,7 +179,7 @@ function gameOver() {
         } else {
             var finalScore = {
                 initials: initials,
-                score: timeRemaining
+                score: timeLeft
             }
             console.log(finalScore);
             var allScores = localStorage.getItem("allScores");
