@@ -1,15 +1,18 @@
 * {
     font-family: 'Source Code Pro', sans-serif;
-    color:rgb(12, 101, 179);
+    --primary-color:rgb(12, 101, 179);
+    --secondary-color: rgb(212, 189, 42);
+    --tertiary-color: rgb(125, 125, 125);
+    --black: #000;
 }
 
 h2 {
-    color: #000;
+    color: var(--black);
 }
 
 /* body */
 body {
-    background-color: rgb(125, 125, 125);
+    background-color: var(--tertiary-color);
 }
 
 .navbar {
@@ -24,6 +27,8 @@ body {
 
 .highScore-link {
     font-weight: bold;
+    padding: 1px;
+    font-size: 1.2rem;
 }
 
 
@@ -31,10 +36,10 @@ body {
 .quiz-box {
     margin: 100px;
     margin-right: 50px;
-    background-color: rgb(212, 189, 42);
-    box-shadow: 5px gray;
+    background-color: var(--secondary-color);
+    box-shadow: 5px var(--tertiary-color);
     border-radius: 10px;
-    border: 1px solid #000;
+    border: 1px solid var(--black);
 }
 
 .quiz-box h2 {
@@ -48,10 +53,10 @@ body {
 /* start quiz button */
 .btn {
     font-weight: bold;
-    background-color: rgb(12, 101, 179);
+    background-color: var(--primary-color);
     display: inline-block;
     margin-bottom: 10px;
-    border: 1px solid #020202;
+    border: 1px solid var(--black);
     border-radius: 10px;
     font-size: 1rem;
     line-height: 22px;
@@ -59,7 +64,7 @@ body {
 
 .btn:hover {
     background-color: green;
-    color: #000;
+    color: var(--black);
 }
 
 .btn:active {
@@ -86,4 +91,6 @@ li {
 footer {
     position: fixed;
     bottom: 0;
+    font-weight: bold;
+    color: var(--secondary-color);
 }
