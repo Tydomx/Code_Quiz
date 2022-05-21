@@ -40,7 +40,7 @@ timerEl.addEventListener("click", function () {
     return;
 });
 
-// questions, choices, and answers in an array
+// questions, choices, and answers in an array.
 var questions = [
     {
         question: 'What does HTML stand for?',
