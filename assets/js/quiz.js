@@ -70,7 +70,7 @@ render = (questionIndex) => {
     questionsDiv.innerHTML = '';
     ulCreate.innerHTML = '';
 
-    // to loop through entire questions array
+    // loops through entire questions array
     for (var i = 0; i < questions.length; i++) {
         // appends question title only
         var userQuestion = questions[questionIndex].question;
