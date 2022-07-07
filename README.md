@@ -1,4 +1,4 @@
-# Code_Quiz_
+# Code_Quiz
 
 ## Purpose
 To get more practice with handling HTML, CSS, and JavaScript all in one project creating a quiz is a project that's able to do so. This is a quiz app that has questions/answers built in for any user to answer and compare their results with a leaderboard at the end. Things I learned were being able to get more exposure to setting up a project with the correct code, linking those codes correctly and understanding the logic that goes behind each function.
