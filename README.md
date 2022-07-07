@@ -1,4 +1,8 @@
 # Code_Quiz
+![GitHub issues badge](https://img.shields.io/github/issues/Tydomx/Code_Quiz)
+![GitHub forks badge](https://img.shields.io/github/forks/Tydomx/Code_Quiz)
+![GitHub stars badge](https://img.shields.io/github/stars/Tydomx/Code_Quiz)
+![GitHub license badge](https://img.shields.io/github/license/Tydomx/Code_Quiz)
 
 ## Purpose
 To get more practice with handling HTML, CSS, and JavaScript all in one project creating a quiz is a project that's able to do so. This is a quiz app that has questions/answers built in for any user to answer and compare their results with a leaderboard at the end. Things I learned were being able to get more exposure to setting up a project with the correct code, linking those codes correctly and understanding the logic that goes behind each function.
